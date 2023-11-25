@@ -1,0 +1,87 @@
+/* 
+
+color palette 
+#353535 >> darkest green
+#3c6e71 
+#ffffff
+#d9d9d9
+#284b63
+
+*/
+
+body{
+    background-color: #ffffff;
+}
+/* row margin */
+.row{
+    margin: 20px 10px; 
+}
+/* Cards */
+.card-body{
+    background-color: #d9d9d9;
+    color: black;
+}
+.card-body:hover{
+    background-color: darkgrey;
+}
+
+/* Location */
+.location {
+    display: flex; 
+    justify-content: space-evenly;
+    align-content: stretch;
+}
+.box-loc{
+    background-color: #284b63;
+    color: #ffffff;
+    padding: 15px;
+}
+#box-hoover:hover{
+    background-color: #3c6e71;
+    color: #ffffff;
+    padding: 15px;
+}
+/* Contact form */
+.contact-form{
+    background-color: #353535;
+    color: #ffffff;
+    padding: 25px;
+}
+.contact-form:hover{
+    background-color: #3c6e71;
+    color: #ffffff;
+    padding: 25px;
+}
+
+/* Game container */
+.game-container{
+    background-color: #284b63;
+    color: #ffffff;
+    padding: 25px;
+    text-align: center;
+    
+}
+hr {
+    border: none; 
+    height: 10px; 
+    background-color: #d9d9d9; 
+    margin: 20px 0;
+}
+/* disclaimer */
+.disclaimer{
+    background-color: #353535;
+    color: #ffffff;
+    padding: 25px;
+    text-align: center;
+}
+
+/* footer font and colours */
+.font-small{
+    font-size: 0.8rem;
+    margin: 1px;
+}
+.footer{
+    background-color: #3c6e71;
+    color: #ffffff;
+    text-align: center;
+}
