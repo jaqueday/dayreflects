@@ -1,16 +1,7 @@
-/* 
-
-color palette 
-#353535 >> darkest green
-#3c6e71 
-#ffffff
-#d9d9d9
-#284b63
-
-*/
 
 body{
     background-color: #ffffff;
+    font-family: sans-serif;
 }
 /* row margin */
 .row{
