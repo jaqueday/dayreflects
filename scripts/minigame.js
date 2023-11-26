@@ -1,24 +1,27 @@
+// function to get age of user and check if over 18
 function enterAuction() {
-    var age = prompt("Please enter your age:");
+    var age = prompt("Please enter your age:"); // check age user
     if (age != null && age != "") {
         if (age < 18) {
             alert("You are not old enough to enter this auction.");
         }
         else {
             alert("You can proceed with the auction.");
-            gotoAction();
+            gotoAction(); // function 
         }
     } else {
         alert("Please enter your age.");
     }
 }
 
+// function called if over 18 to open minigame page
 function gotoAction() {
     window.location.href = "minigame.html";
 }
 
-
-totalPaid = 0;
+// minigame script
+// variable with total paid on auction
+let totalPaid = 0;
 
 function startNewAuction() {
     start(); // Resets the auction
@@ -32,7 +35,9 @@ function start() {
         '../media/art/fall02.jpg',
         '../media/art/macro03.jpg',
         '../media/art/fall03.jpg',
-    ];
+        '../media/art/fall01.jpg',
+        '../media/art/macro01.jpg'
+    ]; //images to be used as "art"
 
     // Get a random index using Math.random() and select the image
     var randomIndex = Math.floor(Math.random() * images.length);
@@ -56,8 +61,8 @@ function start() {
 
 function bid() {
     const userBid = parseInt(document.getElementById('userBid').value);
-    const pcBid = Math.floor(Math.random() * 100) + 1;
-    const value = Math.floor(Math.random() * 50) + 1;
+    const pcBid = Math.floor(Math.random() * 100) + 1; // randomize computer bid value
+    const value = Math.floor(Math.random() * 50) + 1; // randomize actual value 
     let resultText = '';
 
     if (userBid === pcBid) {
@@ -66,8 +71,8 @@ function bid() {
         resultText = 'Your bid is too low, you lost the auction.';
     } else {
         resultText = 'Congratulations! This piece of art is yours to take.' + '\n The value of the art estimate at ' + value + '€.';
-        totalPaid += userBid;
-        if (userBid > value) {
+        totalPaid += userBid; // add bid to total paid 
+        if (userBid > value) { //check value worth
             resultText += '\n You overpaid for this piece of art.';
         }
         else if (userBid < value) {
@@ -85,6 +90,7 @@ function bid() {
     return totalPaid
 }
 
+// once user finish give them total paid
 function end(){
     alert("Thank you for playing the auction game. Your total paid is: €" + totalPaid);
     window.location.href = "../index.html";

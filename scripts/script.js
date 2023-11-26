@@ -25,6 +25,7 @@ function formMessage() {
     var userType = document.getElementById("userType").value;
     var message = document.getElementById("messageArea").value;
 
+    // if statements for form validation
     if (userName === "") {
         alert("Please enter your name.");
         return false;
